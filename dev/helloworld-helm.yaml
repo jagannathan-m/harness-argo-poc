@@ -3,7 +3,6 @@ metadata:
   namespace: "argocd"
 apiVersion: "argoproj.io/v1alpha1"
 kind: "Application"
-sample_version: "2"
 spec:
   destination:
     server: "https://kubernetes.default.svc"
