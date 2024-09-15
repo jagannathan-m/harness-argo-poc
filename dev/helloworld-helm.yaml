@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: hello
+    repoURL: https://cloudecho.github.io/charts
+    targetRevision: 0.1.2
+    helm:
+      releaseName: hello
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: harness-poc-dev
